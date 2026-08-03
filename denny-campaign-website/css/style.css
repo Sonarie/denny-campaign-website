@@ -205,21 +205,51 @@ body {
 }
 
 .hero-photo-area {
+    position: relative;
     align-self: end;
     display: flex;
     justify-content: center;
     overflow: visible;
 }
 
+.hero-photo-area::before {
+    content: "";
+    position: absolute;
+    width: 470px;
+    height: 470px;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.28) 0%,
+        rgba(255, 255, 255, 0.12) 48%,
+        rgba(255, 255, 255, 0) 72%
+    );
+
+    filter: blur(10px);
+    pointer-events: none;
+}
+
 .hero-photo {
+    position: relative;
+    z-index: 1;
+
     display: block;
-    width: 560px;
-    max-width: none;
-    max-height: 610px;
+    width: 640px;              /* was 560px */
+    max-width: 640px;
+    max-height: none;          /* remove the height restriction */
+
     object-fit: contain;
     object-position: center bottom;
-    transform: translateY(8px);
-    filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.3));
+
+    transform: translateY(20px, 25px);   /* let him overlap the bottom */
+
+    filter:
+        drop-shadow(0 4px 5px rgba(255,255,255,.18))
+        drop-shadow(0 15px 22px rgba(0,0,0,.55));
 }
 
 /* ===========================
@@ -254,8 +284,9 @@ body {
 
 .endorsement-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: 1fr;
+    max-width: 850px;
+    margin: 0 auto;
 }
 
 .endorsement-card {
@@ -278,16 +309,36 @@ body {
 
 .endorsement-card blockquote {
     margin: 0;
-    font-size: 1.1rem;
-    line-height: 1.8;
     color: #303747;
-    font-style: italic;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    font-style: normal;
+    white-space: normal;
 }
 
 .endorsement-name {
-    margin-top: 28px;
+    margin-top: 36px;
+    padding-left: 18px;
+
+    text-indent: -18px;
+
     font-weight: 700;
     color: #102957;
+}
+
+.endorsement-name::before {
+    content: "— ";
+}
+
+.endorsement-name span {
+    display: block;
+    margin-top: 4px;
+
+    padding-left: 18px;
+
+    font-weight: 400;
+    color: #666;
+    font-size: 0.95rem;
 }
 
 .site-footer {
@@ -481,21 +532,27 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    align-items: stretch;
 }
 
 .experience-card {
-    padding: 30px;
+    display: flex;
+    flex-direction: column;
+
+    padding: 34px;
     border-top: 5px solid #d62828;
     border-radius: 8px;
     background-color: #ffffff;
     box-shadow: 0 6px 18px rgba(16, 41, 87, 0.08);
+
+    height: 100%;
 }
 
 .experience-card h3 {
     margin: 0 0 14px;
     color: #102957;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 .experience-card p {
@@ -504,6 +561,21 @@ body {
     line-height: 1.7;
 }
 
+.bio-list {
+    margin: 0;
+    padding-left: 18px;
+    color: #303747;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.bio-list li {
+    margin-bottom: 8px;
+}
+
+.bio-list li:last-child {
+    margin-bottom: 0;
+}
 
 /* ===========================
    VISION
@@ -1047,9 +1119,10 @@ body {
     }
 
     .hero-photo {
-    width: min(340px, 90%);
+    width: min(340px, 108%);
     max-height: 420px;
     margin-bottom: 35px;
+    filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.55));
     }
 
     .why-reasons {
