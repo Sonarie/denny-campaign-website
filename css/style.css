@@ -626,15 +626,32 @@ body {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    gap: 32px;
 }
 
+/* ---------- Gallery Cards ---------- */
+
 .gallery-card {
-    margin: 0;
     overflow: hidden;
     border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 8px 24px rgba(16, 41, 87, 0.1);
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(16, 41, 87, 0.10);
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-card:first-child {
+    border-top: 5px solid #d62828;
+}
+
+/* ---------- Photos ---------- */
+
+.gallery-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: center;
 }
 
 .gallery-placeholder {
@@ -651,22 +668,37 @@ body {
     letter-spacing: 1px;
 }
 
-.gallery-card figcaption {
-    padding: 24px;
+/* ---------- Card Content ---------- */
+
+.gallery-card-copy {
+    padding: 28px;
+    flex: 1;
 }
 
-.gallery-card h3 {
-    margin: 0 0 10px;
+.gallery-card-copy h3 {
+    margin: 0 0 18px;
+    padding-bottom: 14px;
+
     color: #102957;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 1.35rem;
+    line-height: 1.2;
+
+    border-bottom: 1px solid #e5e5e5;
 }
 
-.gallery-card p {
+.gallery-card-copy p {
     margin: 0;
     color: #303747;
-    line-height: 1.65;
+    font-size: 1rem;
+    line-height: 1.75;
 }
+
+.gallery-card-copy p + p {
+    margin-top: 14px;
+}
+
+/* ---------- Callout ---------- */
 
 .gallery-callout {
     padding: 64px 0;
@@ -685,6 +717,7 @@ body {
 
 .gallery-callout h2 {
     margin: 0 0 14px;
+
     color: #102957;
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(2.2rem, 5vw, 3.4rem);
@@ -693,6 +726,7 @@ body {
 .gallery-callout p:last-child {
     max-width: 700px;
     margin: 0;
+
     color: #303747;
     line-height: 1.7;
 }
@@ -1349,6 +1383,21 @@ body {
     color: #102957;
 }
 
+.live-counter {
+    margin: 18px auto;
+    text-align: center;
+}
+
+.live-counter > a {
+    display: none;
+}
+
+.live-counter img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
 .counter-display {
     display: flex;
     justify-content: center;
@@ -1393,4 +1442,219 @@ body {
 .involved-card p {
     margin: 0 0 22px;
     line-height: 1.55;
+}
+
+/* ===========================
+   MOBILE HOMEPAGE CLEANUP
+=========================== */
+
+.site-header {
+    position: relative;
+}
+
+.nav-container {
+    min-height: auto;
+    padding: 18px 0 14px;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.campaign-name {
+    text-align: center;
+}
+
+.main-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+}
+
+.main-nav a {
+    font-size: 0.78rem;
+}
+
+/* Simplify the large wave on phones */
+.hero {
+    min-height: auto;
+    overflow: hidden;
+    background-color: #1f2b5c;
+    border-top: 14px solid #c7362f;
+    border-bottom: 14px solid #c7362f;
+}
+
+.hero-waves {
+    display: none;
+}
+
+.hero-container {
+    width: min(92%, 520px);
+    min-height: auto;
+    padding: 52px 0 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    text-align: center;
+}
+
+.hero-copy {
+    width: 100%;
+    padding: 0;
+}
+
+.hero-eyebrow {
+    margin-bottom: 10px;
+}
+
+.hero-copy h1 {
+    margin: 0;
+    font-size: clamp(3.2rem, 17vw, 5rem);
+    line-height: 0.9;
+}
+
+.hero-copy h1 span {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.65em;
+}
+
+.hero-office {
+    margin: 22px 0 16px;
+    font-size: clamp(1.25rem, 6vw, 1.75rem);
+    line-height: 1.2;
+}
+
+.hero-intro {
+    max-width: 390px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.hero-buttons {
+    margin-top: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.hero-buttons .button {
+    width: min(280px, 100%);
+    text-align: center;
+}
+
+.hero-photo-area {
+    width: 100%;
+    height: 380px;
+    margin-top: 0;
+
+    align-self: end;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-photo-area::before {
+    width: 350px;
+    height: 350px;
+    bottom: 10px;
+}
+
+.hero-photo {
+    width: min(450px, 125vw);
+    max-width: none;
+    max-height: 420px;
+    margin: 0;
+
+    object-fit: contain;
+    object-position: center bottom;
+
+    transform: translateY(16px);
+}
+
+/* Why I'm Running */
+.why-home {
+    padding: 64px 0;
+}
+
+.why-home-container {
+    width: min(92%, 520px);
+}
+
+.why-home-heading h2 {
+    font-size: clamp(2.25rem, 11vw, 3.2rem);
+}
+
+.why-reasons {
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.reason-card {
+    min-height: auto;
+    padding: 28px;
+}
+
+.why-home-action .button {
+    width: min(320px, 100%);
+    text-align: center;
+}
+
+/* Visitor and donation cards */
+.home-actions {
+    padding: 55px 0;
+}
+
+.home-actions-grid {
+    width: min(92%, 520px);
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.visitor-card,
+.involved-card {
+    min-height: auto;
+    padding: 32px 24px;
+}
+
+/* Endorsement */
+.endorsements-section {
+    padding: 65px 0;
+}
+
+.endorsements-container {
+    width: min(92%, 520px);
+}
+
+.endorsements-container h2 {
+    font-size: clamp(2.2rem, 11vw, 3.1rem);
+    line-height: 1.05;
+}
+
+.endorsement-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+}
+
+.endorsement-card {
+    padding: 30px 24px;
+}
+
+/* Footer */
+.footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+}
+
+.footer-links {
+    align-items: center;
+}
+
+.footer-bottom {
+    text-align: center;
 }
