@@ -1478,132 +1478,177 @@ body {
 }
 
 /* ===========================
-   MOBILE HERO
+   MOBILE HERO - HARD RESET
 =========================== */
 
 .hero {
-    min-height: auto;
-    overflow: hidden;
+    width: 100% !important;
+    min-height: auto !important;
+    overflow: hidden !important;
+
     background-color: #1f2b5c;
     border-top: 14px solid #c7362f;
     border-bottom: 14px solid #c7362f;
 }
 
 .hero-waves {
-    display: none;
+    display: none !important;
 }
 
 .hero-container {
-    width: min(92%, 520px);
-    min-height: auto;
-    margin: 0 auto;
-    padding: 52px 0 0;
+    width: 100% !important;
+    max-width: 520px !important;
 
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
+    margin: 0 auto !important;
+    padding: 52px 24px 0 !important;
 
-    text-align: center;
+    box-sizing: border-box !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+
+    transform: none !important;
+
+    text-align: center !important;
 }
 
 .hero-copy {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 8px;
-    box-sizing: border-box;
-    text-align: center;
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+
+    transform: none !important;
+
+    box-sizing: border-box !important;
+    text-align: center !important;
 }
 
 .hero-eyebrow {
-    margin: 0 0 12px;
-    text-align: center;
+    width: 100% !important;
+    margin: 0 0 12px !important;
+    text-align: center !important;
 }
 
 .hero-copy h1 {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
+    width: 100% !important;
+    max-width: 100% !important;
 
-    font-size: clamp(3rem, 14vw, 4.4rem);
-    line-height: 0.92;
+    margin: 0 auto !important;
 
-    text-align: center;
+    font-size: clamp(3rem, 13vw, 4rem) !important;
+    line-height: 0.92 !important;
+
+    text-align: center !important;
+
+    white-space: normal !important;
+    transform: none !important;
 }
 
 .hero-copy h1 span {
-    display: block;
-    margin-top: 8px;
+    display: block !important;
 
-    font-size: 0.62em;
-    line-height: 1;
+    width: 100% !important;
+    margin: 8px auto 0 !important;
+
+    font-size: 0.58em !important;
+    line-height: 1 !important;
+
+    text-align: center !important;
+    white-space: nowrap !important;
 }
 
 .hero-office {
-    width: 100%;
-    margin: 22px auto 16px;
+    width: 100% !important;
+    max-width: 100% !important;
 
-    font-size: clamp(1.2rem, 5.5vw, 1.6rem);
-    line-height: 1.25;
+    margin: 22px auto 16px !important;
 
-    text-align: center;
+    font-size: clamp(1.15rem, 5vw, 1.5rem) !important;
+    line-height: 1.25 !important;
+
+    text-align: center !important;
+    white-space: normal !important;
 }
 
 .hero-intro {
-    width: 100%;
-    max-width: 390px;
-    margin: 0 auto;
+    width: 100% !important;
+    max-width: 390px !important;
 
-    font-size: 1rem;
-    line-height: 1.65;
+    margin: 0 auto !important;
 
-    text-align: center;
+    font-size: 1rem !important;
+    line-height: 1.65 !important;
+
+    text-align: center !important;
 }
 
 .hero-buttons {
-    width: 100%;
-    margin-top: 26px;
+    width: 100% !important;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+    margin: 26px auto 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    gap: 12px !important;
+
+    transform: none !important;
 }
 
 .hero-buttons .button {
-    width: min(280px, 100%);
-    text-align: center;
+    width: min(280px, 100%) !important;
+    margin: 0 auto !important;
+    text-align: center !important;
 }
 
 .hero-photo-area {
-    width: 100%;
-    height: 380px;
-    margin: 0 auto;
+    width: 100% !important;
+    height: 380px !important;
 
-    align-self: end;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    margin: 0 auto !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-end !important;
+
+    position: relative !important;
+
+    transform: none !important;
 }
 
 .hero-photo-area::before {
-    width: 350px;
-    height: 350px;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 350px !important;
+    height: 350px !important;
+
+    left: 50% !important;
+    bottom: 10px !important;
+
+    transform: translateX(-50%) !important;
 }
 
 .hero-photo {
-    width: min(430px, 110vw);
-    max-width: none;
-    max-height: 420px;
-    margin: 0 auto;
+    width: min(430px, 105vw) !important;
+    max-width: none !important;
+    max-height: 420px !important;
 
-    object-fit: contain;
-    object-position: center bottom;
+    margin: 0 auto !important;
 
-    transform: translateY(16px);
+    object-fit: contain !important;
+    object-position: center bottom !important;
+
+    transform: translateY(16px) !important;
 }
 
 /* Why I'm Running */
