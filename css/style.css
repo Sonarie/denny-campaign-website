@@ -1499,9 +1499,10 @@ body {
     width: 100% !important;
     max-width: 520px !important;
 
-    margin: 0 auto !important;
-    padding: 52px 24px 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 
+    padding: 52px 24px 0 !important;
     box-sizing: border-box !important;
 
     display: grid !important;
@@ -1509,10 +1510,10 @@ body {
     gap: 24px !important;
 
     position: relative !important;
-    left: auto !important;
-    right: auto !important;
 
-    transform: none !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
 
     text-align: center !important;
 }
@@ -1524,14 +1525,19 @@ body {
     margin: 0 auto !important;
     padding: 0 !important;
 
-    position: static !important;
-    left: auto !important;
-    right: auto !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
 
     transform: none !important;
 
-    box-sizing: border-box !important;
     text-align: center !important;
+    box-sizing: border-box !important;
+}
+
+.hero-copy > * {
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .hero-eyebrow {
