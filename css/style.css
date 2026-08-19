@@ -1390,8 +1390,12 @@ body {
     text-align: center;
 }
 
-.live-counter > a {
-    display: none;
+.live-counter a {
+    display: block;
+    margin-top: 8px;
+    color: #666666;
+    font-size: 0.72rem;
+    text-decoration: none;
 }
 
 .live-counter img {
