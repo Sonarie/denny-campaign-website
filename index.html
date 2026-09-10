@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
 
     <meta
@@ -311,6 +312,45 @@
 
 </section>
 
+<style>
+    .endorsement-grid {
+        display: flex !important;
+        align-items: stretch !important;
+        grid-template-columns: none !important;
+        gap: 24px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: auto !important;
+        padding: 0 4px 20px !important;
+        scroll-snap-type: x mandatory;
+    }
+
+    .endorsement-grid .endorsement-card {
+        align-self: stretch !important;
+        flex: 0 0 520px !important;
+        width: 520px !important;
+        max-width: 85vw !important;
+        scroll-snap-align: start;
+    }
+
+@media (max-width: 800px) {
+    .endorsement-grid {
+        gap: 14px !important;
+        padding: 0 18px 18px !important;
+        scroll-padding-left: 18px;
+    }
+
+.endorsement-grid .endorsement-card {
+    flex: 0 0 84vw !important;
+    width: 84vw !important;
+    max-width: 84vw !important;
+    min-height: 680px !important;
+    padding: 26px 22px !important;
+    scroll-snap-align: start;
+}
+}
+</style>
+
 </section>
 <section class="endorsements-section">
 
@@ -364,6 +404,28 @@
 
     <p class="endorsement-name">
         Bob Roepke
+        <span>Former Mayor, Chaska, MN</span>
+    </p>
+</article>
+
+<article class="endorsement-card">
+
+    <p class="endorsement-title">
+        COMMUNITY ENDORSEMENT
+    </p>
+
+    <blockquote>
+        I’ve known Denny for a while but really got to know him when we were Mayors in our respective communities. I have learned that Denny researches and gets to know what ever the issue that may come up. He is always well prepared and not afraid to stand up what is right for his community. Always doing what he believes is the best for his community.
+        <br><br>
+        After Denny left the mayor’s position, he has continued to be well involved in the Chanhassen community, through his work at Chanhassen High School. He is always well prepared and knows the subjects he is discussing.
+        <br><br>
+        As engaged citizens, you want a council member who knows their community, understands the issues and will speak honestly and factually regardless of what comes before the Council.
+        <br><br>
+        Denny checks all these boxes and is exactly who you want as a next City Council Member.
+    </blockquote>
+
+    <p class="endorsement-name">
+        Mark Windschitl
         <span>Former Mayor, Chaska, MN</span>
     </p>
 
