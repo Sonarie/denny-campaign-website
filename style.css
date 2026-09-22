@@ -1504,3 +1504,127 @@ body {
         text-align: center;
     }
 }
+
+/* ===========================
+   VOTER'S GUIDE
+=========================== */
+
+.voter-guide-section {
+    padding: 80px 0 100px;
+    background: #f5f2eb;
+}
+
+.voter-guide-container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+.voter-guide-heading {
+    text-align: center;
+    margin: 0 auto 32px;
+}
+
+.voter-guide-heading:not(:first-child) {
+    margin-top: 70px;
+}
+
+.voter-guide-heading h2 {
+    margin: 6px 0 0;
+    color: #102957;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.voter-resource-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.voter-resource-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 36px;
+    box-shadow: 0 8px 24px rgba(16, 41, 87, 0.12);
+    border-top: 5px solid #d62828;
+}
+
+.voter-resource-featured {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.voter-resource-copy {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.voter-resource-copy h3 {
+    margin: 0 0 16px;
+    color: #102957;
+    font-size: 1.45rem;
+    line-height: 1.25;
+}
+
+.voter-resource-copy p {
+    margin: 0 0 24px;
+    color: #444;
+    line-height: 1.7;
+}
+
+.voter-resource-copy .button {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.voter-resource-featured .voter-resource-copy .button {
+    align-self: center;
+}
+
+.resource-status {
+    margin: 6px 0 0 !important;
+    font-weight: 700;
+    color: #d62828 !important;
+}
+
+/* ===========================
+   VOTER'S GUIDE - MOBILE
+=========================== */
+
+@media (max-width: 800px) {
+
+    .voter-guide-section {
+        padding: 55px 0 70px;
+    }
+
+    .voter-guide-container {
+        width: min(92%, 700px);
+    }
+
+    .voter-guide-heading {
+        margin-bottom: 24px;
+    }
+
+    .voter-guide-heading:not(:first-child) {
+        margin-top: 55px;
+    }
+
+    .voter-resource-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .voter-resource-card {
+        padding: 28px 22px;
+    }
+
+    .voter-resource-copy h3 {
+        font-size: 1.3rem;
+    }
+
+    .voter-resource-copy .button {
+        align-self: stretch;
+        text-align: center;
+    }
+}
