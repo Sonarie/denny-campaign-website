@@ -1894,3 +1894,133 @@ body {
         text-align: center;
     }
 }
+/* ===========================
+   FEATURED EVENT
+=========================== */
+
+.featured-event {
+    padding: 70px 0;
+    background: #f5f2eb;
+}
+
+.featured-event-container {
+    width: min(1050px, 90%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(280px, 420px) 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.featured-event-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(16, 41, 87, 0.18);
+}
+
+.featured-event-copy h2 {
+    margin: 8px 0 20px;
+    color: #102957;
+    font-size: clamp(2.3rem, 4vw, 3.4rem);
+    line-height: 1.05;
+}
+
+.featured-event-lead {
+    margin: 0 0 28px;
+    color: #333;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+.featured-event-details {
+    margin: 0 0 24px;
+    padding: 22px 0;
+    border-top: 1px solid rgba(16, 41, 87, 0.2);
+    border-bottom: 1px solid rgba(16, 41, 87, 0.2);
+}
+
+.featured-event-details p {
+    margin: 0 0 18px;
+    color: #333;
+    font-size: 1.05rem;
+    line-height: 1.55;
+}
+
+.featured-event-details p:last-child {
+    margin-bottom: 0;
+}
+
+.featured-event-details strong {
+    color: #102957;
+    font-size: 1.15rem;
+}
+
+.featured-event-note {
+    margin: 0;
+    color: #d62828;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* ===========================
+   FEATURED EVENT - MOBILE
+=========================== */
+
+@media (max-width: 800px) {
+
+    .featured-event {
+        padding: 50px 0 55px;
+    }
+
+    .featured-event-container {
+        width: 88%;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .featured-event-image {
+        width: min(100%, 440px);
+        margin: 0 auto;
+    }
+
+    .featured-event-copy {
+        text-align: center;
+    }
+
+    .featured-event-copy h2 {
+        font-size: 2.35rem;
+    }
+
+    .featured-event-lead {
+        font-size: 1.05rem;
+    }
+
+    .featured-event-details {
+        text-align: center;
+    }
+
+    .featured-event-image a {
+    display: block;
+}
+
+.featured-event-image img {
+    cursor: zoom-in;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featured-event-image a:hover img {
+    transform: scale(1.02);
+    box-shadow: 0 16px 36px rgba(16, 41, 87, 0.25);
+}
+
+.featured-event-enlarge {
+    margin: 10px 0 0;
+    text-align: center;
+    color: #102957;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+}
